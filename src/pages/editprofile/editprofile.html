@@ -1,0 +1,117 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile Setting</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+  <ion-list text-center margin-horizontal class="round-box">
+
+    <ion-item stacked class="mb-10">
+      <ion-label>First Name</ion-label>
+      <ion-input type="text" placeholder="Enter First Name" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Last Name</ion-label>
+      <ion-input type="text" placeholder="Enter Last Name" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Email</ion-label>
+      <ion-input type="email" placeholder="Enter Email" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Phone No.</ion-label>
+      <ion-input type="text" placeholder="Enter Phone No." text-center></ion-input>
+    </ion-item>
+
+    <ion-item class="mb-10">
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gtype">
+        <ion-option value="F">Female</ion-option>
+        <ion-option value="M">Male</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item text-center class="mb-10">
+      <ion-label>Address</ion-label>
+      <ion-textarea rows="4" placeholder="Enter an address..."></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Signature</ion-label>
+      <button ion-button outline item-end icon-left> Change Signature </button>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Doctor Name</ion-label>
+      <ion-input type="text" placeholder="Enter Doctor Name" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Doctor Phone No.</ion-label>
+      <ion-input type="text" placeholder="Enter Doctor Phone No." text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Medication</ion-label>
+      <ion-input type="text" placeholder="Enter Medication" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Dosage</ion-label>
+      <ion-input type="text" placeholder="Enter Dosage" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Administer</ion-label>
+      <ion-input type="text" placeholder="Enter Administer" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Insurance Company</ion-label>
+      <ion-input type="text" placeholder="Enter Insurance Company" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Policy in the name of</ion-label>
+      <ion-input type="text" placeholder="Enter Policy in the name of" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Policy Number</ion-label>
+      <ion-input type="text" placeholder="Enter Policy Number" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Emergency Contact</ion-label>
+      <ion-input type="text" placeholder="Enter Emergency Contact" text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Emergency Phone No.</ion-label>
+      <ion-input type="text" placeholder="Enter Emergency Phone No." text-center></ion-input>
+    </ion-item>
+
+    <ion-item stacked class="mb-10">
+      <ion-label>Language Spoken by</ion-label>
+      <ion-input type="text" placeholder="Enter Language Spoken by" text-center></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div text-center margin-horizontal class="mb-20">
+    <button ion-button class="btn main-btn pop-in" (tap)="submit()">Submit</button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>create group</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+    <ion-list text-center margin-horizontal class="round-box">
+
+        <ion-item stacked class="mb-10">
+            <ion-label>Group Name</ion-label>
+            <ion-input type="text" placeholder="Type group name" text-center></ion-input>
+        </ion-item>
+
+        <ion-item class="mb-10">
+            <ion-label>Group Type</ion-label>
+            <ion-select [(ngModel)]="gtype">
+                <ion-option value="inst">Institution</ion-option>
+                <ion-option value="club">Club</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item text-center class="mb-10">
+            <ion-textarea rows="4" placeholder="Enter a description..."></ion-textarea>
+        </ion-item>
+
+        <ion-item stacked class="mb-10">
+            <ion-label>Email</ion-label>
+            <ion-input type="email" placeholder="Type email" text-center></ion-input>
+        </ion-item>
+
+        <ion-item stacked class="mb-10">
+            <ion-label>Account Holder Name</ion-label>
+            <ion-input type="text" placeholder="Type account holder name" text-center></ion-input>
+        </ion-item>
+
+        <ion-item class="mb-10">
+            <ion-label>Account Type</ion-label>
+            <ion-select [(ngModel)]="acType">
+                <ion-option value="comp">company</ion-option>
+                <ion-option value="indv">individual</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item stacked class="mb-10">
+            <ion-label>Routing Number</ion-label>
+            <ion-input type="number" placeholder="Type Routing Number" text-center></ion-input>
+        </ion-item>
+
+        <ion-item stacked class="mb-20">
+            <ion-label>Account Number</ion-label>
+            <ion-input type="number" placeholder="Type Account Number" text-center></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+
+
+    <div text-center margin-horizontal class="mb-20">
+
+        <button ion-button class="btn main-btn pop-in" (tap)="gotohome()">Create</button>
+    </div>
+
+</ion-content>

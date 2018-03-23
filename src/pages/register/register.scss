@@ -1,0 +1,82 @@
+page-register {
+    .scroll-content {
+        background: url('../assets/img/login-bg.jpg') no-repeat center;
+        background-size: cover;
+        &::before {
+            background-color: rgba(248, 105, 170, 0.4);
+            width: 100%;
+            height: 100%;
+            content: ' ';
+            display: block;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+    }
+    .logo-wrap {
+        margin: 16px auto;
+        text-align: center;
+        background-color: #ffffff;
+        .logo {
+            z-index: 100;
+            width: 60%;
+            text-align: center;
+            margin: 0px auto;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .list-ios>.item-block:first-child,
+    .list-ios>.item-block:last-child {
+        border: none;
+    }
+    .round-box {
+        .item,
+        .item-ios,
+        .item-block .item-input {
+            padding: 0px;
+            border: none;
+            .item-inner {
+                padding: 0px 8px;
+                border: none;
+                background-color: #fff;
+                font-weight: normal;
+                .input-wrapper {
+                    border-bottom: none;
+                    ion-label {
+                        color: #878787;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+        .ion-select,
+        .select-text,
+        .text-input {
+            color: #212121;
+            font-weight: normal;
+        }
+    }
+    .term {
+        background-color: transparent;
+        color: #e9e9e9;
+    }
+    .login-footer {
+        background-color: #341f69;
+        .bottom-part {
+            width: 100vw;
+            /* position: absolute;
+            bottom: 0px; */
+            display: inline;
+            /* background-color: #341f69; */
+            p {
+                width: 100%;
+                padding: 0px 5px;
+                color: #e0e0e0;
+                text-transform: capitalize;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<ion-content no-bounce>
+  <ion-header>
+    <ion-navbar>
+      <ion-buttons end class="action-sheets">
+        <button ion-button (click)="presentActionSheet()">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <div class="bottom-wrap">
+    <div class="grp-wrap-bg">
+      <ion-row>
+        <ion-col col-9>
+          <p class="grp-title">class title</p>
+          <p class="type">
+            <span>Institution name</span>
+            <span class="bar">|</span>
+            <span class="status">approved</span>
+          </p>
+        </ion-col>
+        <ion-col col-3>
+
+          <div class="icon-grp">
+
+            <ion-icon name="create" class="edit" (tap)="editclass()"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <p class="desc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+    </div>
+    <div class="menu-options">
+      <ion-card>
+        <img src="assets/img/manager.svg" />
+        <div class="card-title">0</div>
+        <div class="card-subtitle">Roster</div>
+      </ion-card>
+
+      <ion-card>
+        <img src="assets/img/graduate-student-avatar.svg" />
+        <div class="card-title">0</div>
+        <div class="card-subtitle">Student</div>
+      </ion-card>
+
+      <ion-card>
+        <img src="assets/img/calendar.svg" />
+        <div class="card-title">0</div>
+        <div class="card-subtitle">Event</div>
+      </ion-card>
+
+      <ion-card>
+        <img src="assets/img/tasks-list.svg" />
+        <div class="card-title">0</div>
+        <div class="card-subtitle">Assignment</div>
+      </ion-card>
+
+      <ion-card>
+        <img src="assets/img/photo-library.svg" />
+        <div class="card-title">0</div>
+        <div class="card-subtitle">Album</div>
+      </ion-card>
+
+      <ion-card>
+        <img src="assets/img/video-player.svg" />
+        <div class="card-title">0</div>
+        <div class="card-subtitle">Media</div>
+      </ion-card>
+    </div>
+
+    <div class="schedule-list">
+      <ion-list class="group-list">
+        <ion-list-header>
+          latest schedule
+        </ion-list-header>
+        <ion-item>
+          <div class="texts">
+            <p>UPCOMING SCHEDULE:
+              <span>test schedule</span>
+            </p>
+            <p>DATE/TIME:
+              <span>12-12-2018</span>
+              <span>20:20AM</span>
+            </p>
+            <p>LOCATION:
+              <span>dummy address</span>
+            </p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+
+</ion-content>

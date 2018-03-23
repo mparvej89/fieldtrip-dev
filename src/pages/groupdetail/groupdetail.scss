@@ -1,0 +1,130 @@
+page-groupdetail {
+  .header {
+    position: relative;
+  }
+  .bottom-wrap {}
+  .grp-wrap-bg {
+    padding: 0px 10px 10px;
+    background: linear-gradient(to right, #fa6cb1 0%, #de3d40 100%) !important;
+    background-color: #F766A3;
+    .icon-grp {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      ion-icon {
+        margin: 0px 10px;
+        padding: 7px;
+        font-size: 1.7em;
+      }
+      .cash {
+        color: #5dde68;
+      }
+      .edit {
+        color: #ffe457;
+      }
+    }
+    .grp-title {
+      margin: 0px 0px;
+      font-size: 1.6em;
+      text-transform: capitalize;
+      color: #fff;
+    }
+    .type {
+      text-transform: capitalize;
+      font-size: 1.4rem;
+      color: #eeeeee;
+      margin: 10px 0px 0px;
+      .bar {
+        margin: 0px 5px;
+        color: rgba(255, 255, 255, 0.46);
+      }
+      .status {
+        background-color: #ffc9cc;
+        color: #dc0e14;
+        border: 1px solid #ffffff;
+        border-radius: 30px;
+        padding: 1px 4px;
+        text-transform: lowercase;
+        font-size: 1.3rem;
+      }
+    }
+    .desc {
+      font-size: 1.3rem;
+      color: #f0f0f0;
+      margin: 10px 0px;
+    }
+  }
+  .class-list {
+    height: 100%;
+    overflow-y: scroll;
+    .list-ios>.item-block:first-child,
+    .list-ios>.item-block:last-child,
+    .list-ios>.item-wrapper:last-child .item-block {
+      border: none;
+    }
+    .group-list {
+      border: none;
+      margin: 0px auto;
+      .list-header,
+      .list-header-md,
+      .list-header-ios {
+        border-top: none;
+        border-bottom: 1px solid #dedede;
+        color: $list-header;
+        margin-bottom: 0px;
+        .item-inner {
+          border: none;
+        }
+        .label {
+          color: $list-header;
+          border: none;
+        }
+      }
+      ion-item,
+      .item-block {
+        ion-icon {
+          margin-right: 16px;
+          color: $mainbtn;
+          border: 1px solid $mainbtn;
+          border-radius: 50%;
+          font-size: 2.1em;
+          width: 58px;
+          height: 58px;
+          vertical-align: middle;
+          line-height: 56px;
+        }
+        .item-inner {
+          margin-left: 0px;
+          border-bottom: 1px solid $itembottomborder;
+          ion-label {
+            margin: 11px 8px 10px 0;
+          }
+        }
+        .input-wrapper {
+          h2 {
+            color: $item-header;
+            text-transform: capitalize;
+          }
+          p {
+            color: $item-sub-title;
+            text-transform: capitalize;
+          }
+          small {
+            color: $item-small-title;
+          }
+        }
+      }
+    }
+    ion-fab {
+      .fab-md,
+      .fab-ios {
+        background-color: $mainbtn;
+        color: #fff;
+        padding: 5px;
+        ion-icon {
+          font-size: 4.0rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<!-- <ion-menu persistent="true" [content]="content" (ionClose)="collapseMenuOptions()"> -->
+<ion-menu persistent="true" [content]="content">
+  <div class="sidebar-bg"></div>
+  <ion-header class="sidebar">
+    <div text-center class="profile-wrap">
+
+      <ion-avatar class="person-pic">
+        <img src="http://fieldatrips.pwsportfolio.com/uploads/profile/{{loggedPicture}}" alt="avatar">
+      </ion-avatar>
+      <div class="img-box">
+        <i class="material-icons" (tap)="openPageprofile()">mode_edit</i>
+        <ion-icon name="unlock"></ion-icon>
+        <!-- <ion-icon name="cog"></ion-icon> -->
+      </div>
+      <h4 text-center (click)="openPageprofile()">{{loggedUserName}}</h4>
+
+      <!-- <p text-center>9898989898</p> -->
+
+    </div>
+  </ion-header>
+
+
+  <ion-content class="menu-wrap">
+
+    <!-- Side Menu -->
+    <!--  <side-menu-content margin-vertical class="menu-wrap" [accordionMode]="true" [options]="options" (selectOption)="selectOption($event)"></side-menu-content>
+       -->
+
+    <ion-list class="menus">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+
+        <ion-icon [name]="p.icon" margin-horizontal></ion-icon>
+        <span class="menu-name">{{p.title}}</span>
+      </button>
+    </ion-list>
+    <ion-list class="menus">
+      <p class="seperator">More</p>
+      <button menuClose ion-item *ngFor="let m of mPages" (click)="openPage(m)">
+        <ion-icon [name]="m.icon" margin-horizontal></ion-icon>
+        <span class="menu-name">{{m.title}}</span>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

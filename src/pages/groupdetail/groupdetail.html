@@ -1,0 +1,106 @@
+<ion-content no-bounce>
+  <ion-header>
+
+    <ion-navbar>
+      <ion-buttons end class="action-sheets">
+        <button ion-button (click)="presentActionSheet()">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+
+  </ion-header>
+
+  <div class="bottom-wrap">
+    <div class="grp-wrap-bg">
+      <ion-row>
+        <ion-col col-9>
+          <p class="grp-title">group title</p>
+          <p class="type">
+            <span>group type</span>
+            <span class="bar">|</span>
+            <span class="status">active</span>
+          </p>
+        </ion-col>
+        <ion-col col-3>
+
+          <div class="icon-grp">
+            <ion-icon name="cash" class="cash"></ion-icon>
+            <ion-icon name="create" class="edit" (tap)="editgroup()"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <p class="desc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+    </div>
+
+    <div class="class-list">
+
+      <ion-list class="group-list">
+        <ion-list-header>
+          Classes
+        </ion-list-header>
+
+        <ion-item-sliding>
+          <ion-item (tap)="classdetails()">
+            <ion-icon name="people" item-left></ion-icon>
+            <div class="texts">
+              <h2>Test class</h2>
+              <p> Institution name</p>
+              <small>What is Lorem Ipsum? Lorem Ipsum is simply dummy</small>
+            </div>
+          </ion-item>
+
+          <ion-item-options>
+            <button ion-button color="danger" (tap)="removeItem()">
+              <ion-icon name="trash"></ion-icon> Delete</button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item (tap)="classdetails()">
+            <ion-icon name="people" item-left></ion-icon>
+            <div class="texts">
+              <h2>Test group</h2>
+              <p> Institution name</p>
+              <small>What is Lorem Ipsum? Lorem Ipsum is simply dummy</small>
+            </div>
+          </ion-item>
+
+          <ion-item-options>
+            <button ion-button color="danger" (tap)="removeItem()">
+              <ion-icon name="trash"></ion-icon> Delete</button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item (tap)="classdetails()">
+            <ion-icon name="people" item-left></ion-icon>
+            <div class="texts">
+              <h2>Test group</h2>
+              <p> Institution name</p>
+              <small>What is Lorem Ipsum? Lorem Ipsum is simply dummy</small>
+            </div>
+          </ion-item>
+
+          <ion-item-options>
+            <button ion-button color="danger" (tap)="removeItem()">
+              <ion-icon name="trash"></ion-icon> Delete</button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-list>
+
+      <ion-fab right bottom>
+        <button ion-fab margin-right margin-bottom (tap)="opencreate()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>
+    </div>
+
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,41 @@
+page-editprofile {
+  .list-ios>.item-block:first-child,
+  .list-ios>.item-block:last-child {
+    border: none;
+  }
+  .round-box {
+    margin-top: 26px;
+    border: none;
+    .item,
+    .item-ios,
+    .item-block,
+    .item-input {
+      padding: 0px;
+      border: none;
+      &:last-child {
+        border: none;
+      }
+      .item-inner,
+      &:last-child .item-inner {
+        padding: 0px 5px;
+        border-bottom: 1px solid $itembottomborder;
+        font-weight: normal;
+        .input-wrapper {
+          border-bottom: none;
+          ion-label {
+            color: $red;
+            font-weight: normal;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .ion-select,
+    .select-text,
+    .text-input {
+      color: #212121;
+      font-weight: normal;
+      font-size: 1.5rem;
+    }
+  }
+}

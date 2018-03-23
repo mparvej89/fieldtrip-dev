@@ -1,0 +1,51 @@
+<ion-content no-bounce>
+
+  <div class="overlay">
+
+    <div class="logo-wrap" padding-vertical>
+      <div text-center class="logo">
+        <img src="assets/img/logo.png" alt="avatar">
+      </div>
+    </div>
+
+    <form [formGroup]="FormLogin" (ngSubmit)="sendLoginForm(FormLogin.value)">
+      <ion-list text-center margin-horizontal class="round-box">
+
+        <ion-item text-center class="ph mb-10">
+          <ion-input type="text" placeholder="User name or Email" formControlName="email" text-center></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="FormLogin.get('email').hasError('pattern') && (FormLogin.get('email').touched)">
+          Enter a valid email
+        </span>
+        <span class="error" *ngIf="FormLogin.get('email').hasError('required') && (FormLogin.get('email').touched)">
+          Email is required
+        </span>
+        <ion-item text-center class="pass mb-20">
+          <ion-input type="password" placeholder="Password" formControlName="password" text-center></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="FormLogin.get('password').hasError('pattern') && (FormLogin.get('password').touched)">
+          Only numbers allowed
+        </span>
+        <span class="error" *ngIf="FormLogin.get('password').hasError('required') && (FormLogin.get('password').touched)">
+          Password is required
+        </span>
+      </ion-list>
+      <div text-center margin-horizontal class="mb-20">
+        <button ion-button class="btn main-btn pop-in">LOGIN</button>
+      </div>
+    </form>
+    <div text-center margin-horizontal>
+      <button ion-button class="btn fb-btn pop-in" (tap)="facebookLogin()">
+        <img src="assets/img/facebook-logo.svg" />Continue with facebook</button>
+    </div>
+
+
+  </div>
+</ion-content>
+<ion-footer class="login-footer">
+  <div class="bottom-part">
+    <p float-left text-center class="link" (tap)="forgotPass()">Forgot Password?</p>
+    <p float-right text-center class="link" (tap)="registration()">Register Now</p>
+  </div>
+
+</ion-footer>

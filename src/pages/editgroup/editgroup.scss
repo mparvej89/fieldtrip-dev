@@ -1,0 +1,48 @@
+page-editgroup {
+    .list-ios>.item-block:first-child,
+    .list-ios>.item-block:last-child {
+        border: none;
+    }
+    .round-box {
+        margin-top: 26px;
+        border: none;
+        .item,
+        .item-ios,
+        .item-block,
+        .item-input {
+            padding: 0px;
+            border: none;
+            &:last-child {
+                border: none;
+            }
+            .item-inner,
+            &:last-child .item-inner {
+                padding: 0px 5px;
+                border-bottom: 1px solid $itembottomborder;
+                font-weight: normal;
+                .input-wrapper {
+                    border-bottom: none;
+                    ion-label {
+                        color: $red;
+                        font-weight: normal;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* footer buttons style */
+
+.footer-btn {
+    .btn-group {
+        display: flex;
+        .main-btn {
+            width: 50%;
+        }
+        .main-btn:last-child {
+            border-left: 1px solid $red;
+        }
+    }
+}

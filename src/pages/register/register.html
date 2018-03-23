@@ -1,0 +1,95 @@
+<ion-content no-bounce>
+  <div class="overlay">
+
+    <div class="logo-wrap" padding-vertical>
+      <div text-center class="logo">
+        <img src="assets/img/logo.png" alt="avatar">
+      </div>
+    </div>
+
+    <form [formGroup]="FormRegistration" (ngSubmit)="sendRegistrationForm(FormRegistration.value)">
+      <ion-list text-center margin-horizontal class="round-box">
+
+        <ion-item text-center class="mb-10">
+          <ion-input type="text" placeholder="First Name" formControlName="fname" required text-center></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="FormRegistration.get('fname').hasError('pattern') && (FormRegistration.get('fname').touched)">
+          Only characters and numbers allowed
+        </span>
+        <span class="error" *ngIf="FormRegistration.get('fname').hasError('required') && (FormRegistration.get('fname').touched)">
+          First Name is required
+        </span>
+        <ion-item text-center class="mb-10">
+          <ion-input type="text" placeholder="Last Name" formControlName="lname" text-center></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="FormRegistration.get('lname').hasError('pattern') && (FormRegistration.get('lname').touched)">
+          Only characters and numbers allowed
+        </span>
+        <span class="error" *ngIf="FormRegistration.get('lname').hasError('required') && (FormRegistration.get('lname').touched)">
+          Last Name is required
+        </span>
+        <ion-item text-center class="mb-10">
+          <ion-input type="email" placeholder="Email" formControlName="email" text-center></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="FormRegistration.get('email').hasError('pattern') && (FormRegistration.get('email').touched)">
+          Enter a valid email
+        </span>
+        <span class="error" *ngIf="FormRegistration.get('email').hasError('required') && (FormRegistration.get('email').touched)">
+          Email is required
+        </span>
+        <ion-item text-center class="mb-10">
+          <ion-input type="tel" placeholder="Phone Number" formControlName="phone" text-center></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="FormRegistration.get('phone').hasError('pattern') && (FormRegistration.get('phone').touched)">
+          Only numbers allowed
+        </span>
+        <span class="error" *ngIf="FormRegistration.get('phone').hasError('required') && (FormRegistration.get('phone').touched)">
+          Mobile no is required
+        </span>
+        <ion-item text-center class="mb-10">
+          <ion-input type="password" placeholder="Password" formControlName="password" text-center></ion-input>
+
+        </ion-item>
+        <span class="error" *ngIf="FormRegistration.get('password').hasError('pattern') && (FormRegistration.get('password').touched)">
+          Only numbers allowed
+        </span>
+        <span class="error" *ngIf="FormRegistration.get('password').hasError('required') && (FormRegistration.get('password').touched)">
+          Password is required
+        </span>
+        <ion-item class="mb-20">
+          <ion-label>Gender</ion-label>
+          <ion-select [(ngModel)]="gender" formControlName="gender">
+            <ion-option value="Female">Female</ion-option>
+            <ion-option value="Male">Male</ion-option>
+          </ion-select>
+        </ion-item>
+        <span class="error" *ngIf="FormRegistration.get('gender').hasError('required') && (FormRegistration.get('gender').touched)">
+          Gender is required
+        </span>
+        <ion-row>
+          <ion-col margin-left col-2>
+            <ion-item class="term">
+              <ion-checkbox item-left color="light" formControlName="termsCheck" required (ionChange)="onTermsChecked($event)"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+          <ion-col class="term" col-9>
+            <p item-right (click)="termsmodal()">I accept the terms and conditions</p>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+
+      <div text-center margin-horizontal class="mb-20">
+
+        <button ion-button class="btn main-btn pop-in" [disabled]="!FormRegistration.valid">SIGN UP</button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>
+
+<ion-footer class="login-footer">
+  <div class="bottom-part">
+    <p text-center class="link" (click)="backLogin()">Already registered? login</p>
+  </div>
+
+</ion-footer>

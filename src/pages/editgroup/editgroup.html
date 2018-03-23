@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>edit group</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-bounce>
+    <ion-list text-center margin-horizontal class="round-box">
+
+        <ion-item stacked class="mb-10">
+            <ion-label>Group Name</ion-label>
+            <ion-input type="text" placeholder="Type group name" text-center></ion-input>
+        </ion-item>
+
+
+
+        <ion-item text-center class="mb-20">
+            <ion-textarea rows="4" placeholder="Enter a description..."></ion-textarea>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>
+<ion-footer class="footer-btn">
+    <div class="btn-group">
+        <button ion-button class="btn main-btn pop-in" (tap)="gotohome()">cancel</button>
+        <button ion-button class="btn main-btn pop-in" (tap)="gotohome()">ok</button>
+    </div>
+</ion-footer>
